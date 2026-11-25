@@ -1,0 +1,320 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FAF6F0;
+    color: #333333;
+    line-height: 1.7;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+nav {
+    background-color: #ffffff;
+}
+
+a {
+    color: #9B1C27;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.page-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.page-section h1,
+.page-section h2 {
+    color: #9B1C27;
+}
+
+.hero-section {
+    min-height: 400px;
+    padding: 80px 30px;
+    background-color: #9B1C27;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: #9B1C27;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #9B1C27;
+    border: 1px solid #9B1C27;
+}
+
+.dashboard-grid,
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.dashboard-card,
+.restaurant-card,
+.form-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-card h3,
+.restaurant-card h3 {
+    color: #9B1C27;
+}
+
+.form-card {
+    max-width: 650px;
+    margin: 25px auto;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #9B1C27;
+}
+
+.restaurant-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.reservations-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.reservations-table th,
+.reservations-table td {
+    padding: 12px;
+    border: 1px solid #eeeeee;
+    text-align: left;
+}
+
+.reservations-table th {
+    background-color: #9B1C27;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .page-section {
+        padding: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-section {
+        padding: 50px 20px;
+    }
+}
+
+.site-header {
+    background-color: #ffffff;
+    padding: 18px 5%;
+    border-bottom: 1px solid #eee5df;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.site-logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #9B1C27;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: #333333;
+    font-weight: 600;
+}
+
+.main-nav a:hover {
+    color: #9B1C27;
+}
+
+.site-footer {
+    background-color: #3b2022;
+    color: #ffffff;
+    text-align: center;
+    padding: 22px;
+    margin-top: 50px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .main-nav {
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+
+/* ---------- Added: classes used by the pages that were missing ---------- */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card .form-control,
+.card input[type="text"],
+.card input[type="email"],
+.card input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0 14px 0;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.card label,
+.card span {
+    font-size: 15px;
+}
+
+.section-title {
+    color: #9B1C27;
+    margin-top: 0;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.restaurant-card h2 {
+    color: #9B1C27;
+    font-size: 22px;
+    margin: 14px 0 6px 0;
+}
+
+.restaurant-placeholder {
+    height: 190px;
+    border-radius: 9px;
+    background-color: #9B1C27;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-card .stat-number {
+    font-size: 34px;
+    font-weight: bold;
+    color: #9B1C27;
+    margin: 6px 0 0 0;
+}
+
+.msg-error {
+    color: #b00020;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+
+.msg-success {
+    color: #1b7a3a;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+
+.reservations-table a {
+    color: #9B1C27;
+    font-weight: bold;
+}

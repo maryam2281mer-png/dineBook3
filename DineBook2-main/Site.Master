@@ -1,0 +1,67 @@
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="DineBook.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%: Page.Title %> | DineBook</title>
+    <link href="~/Styles/style.css" rel="stylesheet" runat="server" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+
+        <header class="site-header">
+            <div class="header-container">
+                <a href="<%= ResolveUrl("~/Default.aspx") %>" class="site-logo">
+                    DineBook
+                </a>
+
+                <nav class="main-nav">
+                    <asp:HyperLink ID="lnkHome" runat="server"
+                        NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+
+                    <asp:HyperLink ID="lnkAbout" runat="server"
+                        NavigateUrl="~/About.aspx">About Us</asp:HyperLink>
+
+                    <asp:HyperLink ID="lnkRestaurants" runat="server"
+                        NavigateUrl="~/Restaurants.aspx">Restaurants</asp:HyperLink>
+
+                    <asp:HyperLink ID="lnkContact" runat="server"
+                        NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
+
+                    <asp:HyperLink ID="lnkDashboard" runat="server"
+                        NavigateUrl="~/User/Dashboard.aspx">My Dashboard</asp:HyperLink>
+
+                    <asp:HyperLink ID="lnkReservations" runat="server"
+                        NavigateUrl="~/User/MyReservations.aspx">My Reservations</asp:HyperLink>
+
+                    <asp:HyperLink ID="lnkLogin" runat="server"
+                        NavigateUrl="~/Account/Login.aspx">Login</asp:HyperLink>
+
+                    <asp:HyperLink ID="lnkLogout" runat="server"
+                        NavigateUrl="~/Account/Logout.aspx">Logout</asp:HyperLink>
+
+                    <asp:HyperLink ID="lnkRegister" runat="server"
+                        NavigateUrl="~/Account/Register.aspx">Register</asp:HyperLink>
+
+                    <asp:HyperLink ID="lnkAdmin" runat="server"
+                        NavigateUrl="~/Admin/AdminLogin.aspx">Admin</asp:HyperLink>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 DineBook. All rights reserved.</p>
+        </footer>
+
+    </form>
+</body>
+</html>
